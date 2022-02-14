@@ -21,7 +21,7 @@ const getTransactionStats = createAsyncThunk(
     const { year, month } = params;
 
     try {
-      const { data } = await axios.get("api/transactions/stats", {
+      const { data } = await axios.get("api/transactions/statistics", {
         params: {
           year,
           month,

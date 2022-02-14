@@ -31,7 +31,7 @@ const signUp = createAsyncThunk(
   }
 );
 
-const logIn = createAsyncThunk("auth/login", async (credentials, thunkAPI) => {
+const logIn = createAsyncThunk("auth/signin", async (credentials, thunkAPI) => {
   try {
     const { data } = await axios.post("api/users/login", credentials);
     token.set(data.data.token);
@@ -68,7 +68,7 @@ const logInByGoogle = createAsyncThunk(
   }
 );
 
-const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
+const logOut = createAsyncThunk("auth/signout", async (_, thunkAPI) => {
   try {
     await axios.post("api/users/logout");
     token.unset();
