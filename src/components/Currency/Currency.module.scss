@@ -1,0 +1,102 @@
+@import "../../assets/scss/colors.scss";
+@import "../../assets/scss/utils/variables";
+
+.div {
+  border-radius: 30px;
+  text-align: center;
+  color: getColor("third-text-color");
+  background-color: getColor("fourth-text-color");
+  width: 100%;
+  border-spacing: 0px;
+  overflow: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: $for-house;
+  color: $main-bg;
+
+  @media (max-width: $max-mobile) {
+    width: 280px;
+    height: 174px;
+  }
+  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+    width: 334px;
+    height: 174px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 320px;
+    height: 320px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/img/wave-currency.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    left: 0;
+    bottom: 0;
+
+    @media (max-width: $max-mobile) {
+      width: 280px;
+      height: 93px;
+    }
+    @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+      width: 334px;
+      height: 111px;
+    }
+
+    @media (min-width: $min-desktop) {
+      width: 348px;
+      height: 134px;
+    }
+  }
+}
+
+.table {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.table th {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.table th:first-child {
+  padding-left: 10px;
+}
+
+.table th:last-child {
+  padding-right: 10px;
+}
+
+.tbody td {
+  border: none;
+  line-height: 1.4;
+}
+
+.table td {
+  text-align: center;
+  @media (max-width: $max-tablet) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding-top: 22px;
+  }
+}
+
+.thead {
+  background: rgba(255, 255, 255, 0.2);
+
+  @media (max-width: $max-tablet) {
+    height: 50px;
+  }
+  @media (min-width: $min-desktop) {
+    height: 60px;
+  }
+}

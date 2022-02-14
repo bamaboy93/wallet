@@ -1,0 +1,26 @@
+@import "../../assets/scss/utils/variables.scss";
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $mobile-middle) {
+    max-width: 480px;
+    padding: 0px 20px;
+  }
+
+  @media (min-width: ($mobile-middle + 1px)) and (max-width: $max-mobile) {
+    width: 480px;
+    padding: 0px 30px;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+    width: 768px;
+    padding: 0px 40px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 1280px;
+    padding: 0px 85px;
+  }
+}

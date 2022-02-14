@@ -1,0 +1,35 @@
+@import "../../assets/scss/utils/variables.scss";
+@import "../../assets/scss/colors.scss";
+
+.balanceContainer {
+  width: 280px;
+  height: 80px;
+
+  padding: 8px 0 13px 30px;
+
+  border-radius: 30px;
+  background-color: $main-bg;
+
+  @media screen and (min-width: $tablet) {
+    width: 334px;
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 320px;
+  }
+}
+
+.balanceHeadline {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: $text-passive-toggle;
+  text-transform: uppercase;
+}
+
+.balanceCount {
+  font-family: $second-font;
+  font-size: 30px;
+  font-weight: bold;
+  color: $main-text;
+}

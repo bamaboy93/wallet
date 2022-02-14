@@ -1,0 +1,80 @@
+@import "../../../assets/scss/utils/variables.scss";
+@import "../../../assets/scss/colors.scss";
+
+.userMenuContainer {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.userInfoButton {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+
+  margin-right: 5px;
+  padding: 0;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  border-right: 1px solid $text-passive-toggle;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 10px;
+  }
+}
+
+.userAvatar {
+  width: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+
+  @media screen and (min-width: $mobile-middle) {
+    width: 25px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 35px;
+  }
+}
+
+.userName {
+  display: inline-block;
+
+  margin-right: 10px;
+  // padding-right: 15px;
+
+  // border-right: 1px solid $text-passive-toggle;
+
+  font-size: 18px;
+  color: $text-passive-toggle;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 15px;
+  }
+}
+
+.buttonLoggout {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+
+  font-size: 18px;
+  color: $text-passive-toggle;
+  background-color: transparent;
+}
+
+.buttonText {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}

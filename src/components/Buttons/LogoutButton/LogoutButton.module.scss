@@ -1,0 +1,33 @@
+@import "../../../assets/scss/colors.scss";
+@import "../../../assets/scss/utils/variables.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: $text-passive-toggle;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+.iconExit {
+  width: 18px;
+  height: 18px;
+  fill: #bdbdbd;
+}
+.text {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: $main-font;
+}
+
+.button:hover .text {
+  color: #ff6596;
+}
