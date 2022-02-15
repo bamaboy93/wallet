@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import apiOperations from "./categories-operations";
+import { getCategories } from "./categories-operations";
 
 const initialState = {
   categories: {},
@@ -13,28 +13,16 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [apiOperations.getCategories.pending](state, action) {
+    [getCategories.pending](state, action) {
       state.isLoading = true;
       state.error = false;
     },
-    [apiOperations.getCategories.rejected](state, action) {
+    [getCategories.rejected](state, action) {
       state.isLoading = false;
       state.error = true;
     },
-    [apiOperations.getCategories.fulfilled](state, action) {
-      state.categories = action.payload.data;
-      state.isLoading = false;
-    },
-    [apiOperations.getTransactionStats.pending](state, action) {
-      state.isLoading = true;
-      state.error = false;
-    },
-    [apiOperations.getTransactionStats.rejected](state, action) {
-      state.isLoading = false;
-      state.error = true;
-    },
-    [apiOperations.getTransactionStats.fulfilled](state, action) {
-      state.transactionStats = action.payload.data;
+    [getCategories.fulfilled](state, action) {
+      state.categories = action.payload.data.categories;
       state.isLoading = false;
     },
   },

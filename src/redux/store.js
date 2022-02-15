@@ -12,7 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import transactionsReducer from "./transactions/transactions-slice";
 import authReducer from "./auth/auth-slice";
-import categoriesReducer from "./categories/categories-slice";
+import categoriesReducer from "./categories/categoriesReducer";
 
 const middleware = [
   ...getDefaultMiddleware({
